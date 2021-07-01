@@ -247,12 +247,12 @@ select option {
 }
 .menu__info i {display: none; margin-right: 50px;}
 .mobile_menu {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: white;
     display: none;
     justify-content: space-evenly;
-    padding: 30px;
+    margin-top: 15px;
 
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -265,7 +265,7 @@ select option {
 .mobile_menu__links a, #close_mob_menuBtn{
     padding: 5px;
     margin: 5px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 }
 .mobile_menu__links a:hover, #close_mob_menuBtn:hover{
@@ -314,16 +314,12 @@ select option {
     .experience_form {height: 400px; align-items: center}
     .experience_form label {height: 10%; width: 40%}
     .personal_info__form {width: 90%; max-width: none; align-items: center}
-    .js__form {flex-direction: row-reverse}
     .js__form__text {
         height: 250px;
-        flex-direction: column;
-        justify-content: space-evenly;
     }
     .js__form__text p {
         max-width: none;
-    }
-    input[type=range] {
-        transform: rotate(270deg);
+        font-size: calc(0.5rem + 1vw);
+        padding: 2px;
     }
 }
