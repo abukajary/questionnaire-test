@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/misc.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Анкета</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="mobile_menu" id="mobMenu">
+        <div class="mobile_menu__links">
+            <a href="">Личная информация</a>
+            <a href="">Опыт</a>
+            <a href="">JavaScript</a>
+            <a href="">О себе</a>
+        </div>
+        <i class="far fa-times-circle" id="close_mob_menuBtn" style="height: 35px;"></i>
+    </div>
+    <div class="menu">
+        <div class="menu__info">
+            <i class="fas fa-bars" id="open_mob_menuBtn"></i>
+            <a href="">Личная информация</a>
+            <a href="">Опыт</a>
+            <a href="">JavaScript</a>
+            <a href="">О себе</a>
+        </div>
+        <div class="menu__line"></div>
+    </div>
+    <div class="personal_info">
+        <div class="personal_info__title">
+            <p>Анкета</p>
+            <img src="img/icon.png" alt="Инфо">
+            <p class="text_title">Личная информация</p>
+        </div>
+        <form action="" class="personal_info__form">
+            <input type="text" placeholder="ФИО" value="Abubakir Jarylgapov">
+            <select id="yearSelector">
+                <option disabled selected>Год рождения</option>
+            </select>
+            <input type="text" placeholder="Место проживания" value="Aktobe, Kazakhstan">
+            <input type="text" placeholder="Skype" value="live:zharylgapov.abubakir">
+            <input type="email" placeholder="E-mail" value="jarylgapov.abubakir@gmail.com">
+        </form>
+    </div>
+    <div class="experience">
+        <img src="img/list-icon.png" alt="List">
+        <p class="text_title">Расскажите о своем опыте</p>
+        <form action="" class="experience_form">
+            <label for="bem-oocss">
+                <input class="regular-checkbox" type="checkbox" id="bem-oocss" checked>
+                <p>БЭМ/OOCSS</p>
+            </label>
+            <label for="stylus-less-sass">
+                <input class="regular-checkbox" type="checkbox" id="stylus-less-sass">
+                <p>Stylus/LESS/SASS</p>
+            </label>
+            <label for="work-w-svg">
+                <input class="regular-checkbox" type="checkbox" id="work-w-svg" checked>
+                <p>Работаю с SVG</p>
+            </label>
+            <label for="semantic-style">
+                <input class="regular-checkbox" type="checkbox" id="semantic-style" checked>
+                <p>Верстаю семантично</p>
+            </label>
+            <label for="es5-6">
+                <input class="regular-checkbox" type="checkbox" id="es5-6" checked>
+                <p>ES2015/ES2016</p>
+            </label>
+            <label for="gulp-grunt">
+                <input class="regular-checkbox" type="checkbox" id="gulp-grunt">
+                <p>Gulp/GRUNT</p>
+            </label>
+            <label for="webpack">
+                <input class="regular-checkbox" type="checkbox" id="webpack" checked>
+                <p>Webpack</p>
+            </label>
+            <label for="jQuery">
+                <input class="regular-checkbox" type="checkbox" id="jQuery">
+                <p>jQuery</p>
+            </label>
+            <label for="use-git">
+                <input class="regular-checkbox" type="checkbox" id="use-git" checked>
+                <p>Использую Git</p>
+            </label>
+        </form>
+    </div>
+    <div class="js">
+        <img src="img/icon_js.png" alt="JS">
+        <p class="text_title">Уровень владения JavaScript</p>
+        <div class="js__form">
+            <div class="js__form__text">
+                <p>Не владею</p>
+                <p>Использую готовые решения</p>
+                <p>Использую готовые решения и умею их переделывать</p>
+                <p>Пишу сложный JS с нуля</p>
+            </div>
+            <input type="range" min="1" max="5" value="3">
+        </div>
+    </div>
+    <div class="about">
+        <img src="img/icon_about.png" alt="about">
+        <p class="text_title">Расскажите о себе</p>
+        <div class="text_description">
+            <p class="">Напишите несколько предложений, чем привлекла наша вакансия</p>
+            <p class="">и что вы ожидаете от работы у нас.</p>
+        </div>
+        <form action="" class="about__form">
+            <textarea>Это был мой первый опыт в PixelPerfect, в основном я верстаю с помощью FlexBox и редко использую CssGrid. Мне вакансия понравилась тем, что работа удаленная, однако, если нужно готов ходить в офис. Хорошо знаю JavaScript и изучаю стандарты ES6. Мой уровень знания jQuery на начальном уроне, однако понять и кастомизировать код я смогу. Так же могу работать c node.js, python django, java. Работаю в Figma и Adobe XD.</textarea>
+            <button style="cursor: pointer" id="sendUserFormData">Готово</button>
+        </form>
+    </div>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
