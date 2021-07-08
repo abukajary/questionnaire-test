@@ -24,7 +24,7 @@
     <div class="menu">
         <div class="menu__info">
             <i class="fas fa-bars" id="open_mob_menuBtn"></i>
-            <a href="">Личная информация</a>
+            <a href="select.html">Личная информация</a>
             <a href="">Опыт</a>
             <a href="">JavaScript</a>
             <a href="">О себе</a>
@@ -39,9 +39,10 @@
         </div>
         <form action="" class="personal_info__form">
             <input type="text" placeholder="ФИО" value="Abubakir Jarylgapov">
-            <select id="yearSelector">
-                <option disabled selected>Год рождения</option>
-            </select>
+            <div class="select">
+                <div class="selectBtn" data-type="firstOption">2000</div>
+                <div class="selectDropdown" id="yearSelector"></div>
+            </div>
             <input type="text" placeholder="Место проживания" value="Aktobe, Kazakhstan">
             <input type="text" placeholder="Skype" value="live:zharylgapov.abubakir">
             <input type="email" placeholder="E-mail" value="jarylgapov.abubakir@gmail.com">

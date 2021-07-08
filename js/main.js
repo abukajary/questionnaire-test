@@ -1,19 +1,38 @@
 'use strict'
 
+
 let dateDropdown = document.getElementById('yearSelector'),
     currentYear = new Date().getFullYear(),
     earliestYear = 1920;
 
 while (currentYear >= earliestYear) {
-    let dateOption = document.createElement('option');
-    dateOption.value = currentYear;
-    dateOption.text = currentYear;
-    dateDropdown.add(dateOption);
-    if (currentYear === 2000) {
-        dateOption.selected = true
-    }
+    let dateOption = document.createElement('div'),
+        currYear = document.createTextNode(currentYear);
+    // dateOption.value = currentYear;
+    dateOption.classList.add('option')
+    dateOption.appendChild(currYear);
+    dateDropdown.appendChild(dateOption);
     currentYear -= 1;
 }
+
+const select = document.querySelectorAll('.selectBtn');
+const option = document.querySelectorAll('.option');
+
+select.forEach(a => {
+    a.addEventListener('click', b => {
+        const next = b.target.nextElementSibling;
+        next.classList.toggle('toggle');
+    })
+})
+option.forEach(a => {
+    a.addEventListener('click', b => {
+        b.target.parentElement.classList.remove('toggle');
+
+        const parent = b.target.closest('.select').children[0];
+        parent.setAttribute('data-type', b.target.getAttribute('data-type'));
+        parent.innerText = b.target.innerText;
+    })
+})
 
 let send_u_form_data_btn = document.getElementById('sendUserFormData');
 send_u_form_data_btn.addEventListener('click', ()=> {
